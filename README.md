@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# KuduCompare Application
 
-## Getting Started
+## Table of Contents
 
-First, run the development server:
+- [Objective](#objective)
+- [Technologies Used](#technologies-used)
+- [Features](#features)
+  - [Data Table](#data-table)
+  - [Charts](#charts)
+  - [Interactivity](#interactivity)
+  - [UI Components](#ui-components)
+- [State Management](#state-management)
+- [Installation](#installation)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Objective
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The KuduCompare application aims to provide a user interface for viewing, comparing, and analyzing data on various species of antelopes. The application offers interactive data tables and charts for a better understanding of antelope attributes.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+---
 
-## Learn More
+## Technologies Used
 
-To learn more about Next.js, take a look at the following resources:
+- **Frontend**: React, Next.js v13.5, Tailwind CSS, Shadcn/ui
+- **Chart Libraries**: Recharts
+- **Type Safety**: Zodios
+- **API**: RESTful API (details to be specified)
+- **State Management**: React Hooks, `useState`, `useMemo`, `useCallback`
+- **Data Table**: react-table
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Features
 
-## Deploy on Vercel
+### Data Table (react-table)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Displays antelope data in an interactive table.
+- Columns include: Name, Continent, Weight, Height, Horn Type, Picture.
+- Row selection management for more detailed analysis.
+- Sorting capabilities on each column.
+- Pagination to navigate through the data.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+---
+
+### Charts
+
+1. **Weight and Height Bar Chart**
+
+   - Displays the weight and height of selected antelopes.
+
+2. **Horn Type Pie Chart**
+
+   - Displays the distribution of different horn types among the antelopes.
+   - Labels display the percentage of each type.
+
+3. **Average antelope weight/continent**
+   - Displays the average weight of antelopes by continent.
+
+---
+
+### Interactivity
+
+- Users can select rows in the table to update the charts accordingly.
+
+---
+
+### UI Components (Shadcn UI)
+
+- Utilizes Shadcn UI to style Tailwind components, including cards, buttons, and other UI elements.
+
+---
+
+## State Management
+
+- Uses `useState` for local state management.
+- Uses `useMemo` and `useCallback` for performance optimization.
+
+---
+
+## Installation
+
+- run `pnpm install`
+- rename `.env.local.sample` to `.env.local`
+- `pnpm dev`
