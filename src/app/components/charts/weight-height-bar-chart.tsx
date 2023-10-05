@@ -6,7 +6,7 @@ import {
   XAxis,
   YAxis,
 } from 'recharts'
-import { Antelope } from '~/api/client'
+import { Antelope } from '~/app/server'
 
 export const WeightHeightBarChart: React.FC<{ data: Antelope[] }> = ({
   data,

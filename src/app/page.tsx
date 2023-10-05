@@ -2,20 +2,17 @@
 
 import { RowSelectionState, Updater } from '@tanstack/react-table'
 import { Suspense, useCallback, useMemo, useState } from 'react'
-import { antelopeHooks } from '~/api/client'
 import { columns } from '~/components/data-table/columns'
 import { DataTable } from '~/components/data-table/data-table'
 import { Card } from '~/components/ui/card'
 
+import { trpc } from './_trpc/client'
 import { ContinentBarChart } from './components/charts/continent-bar-chart'
 import HornTypePieChart from './components/charts/horn-type-pie-chart'
 import { WeightHeightBarChart } from './components/charts/weight-height-bar-chart'
 
 const Content = () => {
-  const { data } = antelopeHooks.useGetAllAntelopes(undefined, {
-    suspense: true,
-  })
-
+  const { data } = trpc.getKudus.useQuery()
   const [selectedRows, setSelectedRows] = useState<RowSelectionState>({})
 
   const onRowSelectionChange = useCallback(

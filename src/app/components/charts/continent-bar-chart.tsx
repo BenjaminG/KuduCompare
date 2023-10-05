@@ -7,7 +7,7 @@ import {
   XAxis,
   YAxis,
 } from 'recharts'
-import { Antelope } from '~/api/client'
+import { Antelope } from '~/app/server'
 
 export const ContinentBarChart: React.FC<{ data: Antelope[] }> = ({ data }) => {
   const meanWeightByContinent = useMemo(() => {
