@@ -28,7 +28,7 @@ const Content = () => {
     }
 
     return data?.filter((_, index) => selectedRows[index]) || []
-  }, [selectedRows])
+  }, [data, selectedRows])
   return (
     <div className="flex flex-col justify-center shadow p-4">
       <h1 className="text-3xl font-bold tracking-tight mb-4">KuduCompare</h1>
